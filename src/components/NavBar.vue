@@ -2,8 +2,8 @@
   <div class="container is-widescreen">
     <nav class="navbar is-transparent">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img  src="img/logonoso.svg" alt="Logo">
+        <a class="navbar-item" href="#/">
+          <img src="img/logonoso.svg" alt="Logo">
           NosoExplorer
         </a>
         <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
@@ -20,10 +20,10 @@
             Blockchain
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a class="navbar-item" href="#/blocks">
               Blocks
             </a>
-            <a class="navbar-item">
+            <a class="navbar-item" href="#/transactions">
               Transactions
             </a>
             <a class="navbar-item">
@@ -89,17 +89,44 @@
     </nav>
 
   </div>
+  <br />
 </template>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+  // Handle navbar burger toggle
+  const navbarBurgers = document.querySelectorAll('.navbar-burger');
+  navbarBurgers.forEach(el => {
+    el.addEventListener('click', () => {
+      const targetId = el.dataset.target;
+      const targetEl = document.getElementById(targetId);
 
-  var dropdown = document.querySelector('.dropdown');
+      el.classList.toggle('is-active');
+      if (targetEl) {
+        targetEl.classList.toggle('is-active');
+      }
+    });
+  });
 
-  dropdown.addEventListener('click', function (event) {
-    event.stopPropagation();
-    dropdown.classList.toggle('is-active');
+  // Handle dropdown toggle
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', (event) => {
+      event.stopPropagation();
+      dropdown.classList.toggle('is-active');
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (event) => {
+    const isDropdown = event.target.matches('.dropdown, .dropdown *');
+    if (!isDropdown) {
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('is-active');
+      });
+    }
   });
 });
+
 
 </script>
