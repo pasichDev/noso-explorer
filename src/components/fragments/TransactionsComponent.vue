@@ -2,14 +2,14 @@
     <div class="container is-widescreen">
         <section class="section">
       <div class="container">
-        Blocks
+        Transacrions Fragment
       </div></section>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'BlocksPage' 
+    name: 'TransacrionsFragment' 
   }
   </script>
   

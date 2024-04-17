@@ -42,7 +42,3 @@ export default {
 
   <FooterPage />
 </template>
-
-
-
-<style></style>

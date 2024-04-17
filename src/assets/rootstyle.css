@@ -1,5 +1,35 @@
 :root {
-    --bg-color: #000000;
+  --bg-color: #000000;
 }
 
+html {
+  font-size: 14px;
+  @include tablet {
+    font-size: 18px;
+  }
+  @include desktop {
+    font-size: 22px;
+  }
+}
+#app{
+  background: rgb(60,42,98);
+  background: radial-gradient(circle, rgba(60,42,98,1) 4%, rgba(58,42,97,0.9864320728291317) 35%, rgba(42,75,97,1) 100%);
+}
 
+.box-with-border {
+  border: 1px solid #5a5d63; 
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+.container {
+  padding: 20px;
+}
+
+.container-mg {
+  margin: 20px;
+}
+
+.rounded-container {
+  border-radius: 20px; 
+}
