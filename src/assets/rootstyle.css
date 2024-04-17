@@ -1,7 +1,7 @@
 :root {
   --bg-color: #000000;
 }
-
+@media (max-width:768px) { .container { width: 90% !important;} }
 html {
   font-size: 14px;
   @include tablet {
@@ -32,4 +32,5 @@ html {
 
 .rounded-container {
   border-radius: 20px; 
+  
 }

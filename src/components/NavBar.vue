@@ -1,5 +1,4 @@
 <template>
-
   <div class="container-sm">
     <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
       <div class="container-fluid">

@@ -1,6 +1,5 @@
 <template>
-  <div class="container bg-light rounded-container ">
-
+  <div class="container bg-light rounded-container">
     <div class="container-sm ">
       <div class="row">
         <div class="col-xl-6 col-md-6 col-12 mb-4">
